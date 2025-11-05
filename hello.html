@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign-Up</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Eye icons from Font Awesome (CDN) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tab buttons -->
+        <div class="tab">
+            <button class="tablink active" onclick="openTab(event,'login')">Login</button>
+            <button class="tablink" onclick="openTab(event,'signup')">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login" class="tabcontent" style="display:block;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="loginName" placeholder="Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPass" placeholder="Password" required>
+                    <span class="eye" onclick="togglePass('loginPass', this)">
+                        <i class="fa fa-eye-slash"></i>
+                    </span>
+                </div>
+                <button type="submit">Login</button>
+                <p class="message" id="loginMsg"></p>
+            </form>
+        </div>
+
+        <!-- Sign-Up Form -->
+        <div id="signup" class="tabcontent">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="input-group">
+                    <input type="text" id="signupName" placeholder="Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="signupPass" placeholder="Password" required>
+                    <span class="eye" onclick="togglePass('signupPass', this)">
+                        <i class="fa fa-eye-slash"></i>
+                    </span>
+                </div>
+                <button type="submit">Create Account</button>
+                <p class="message" id="signupMsg"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="scrift.js"></script>
+</body>
+</html>
